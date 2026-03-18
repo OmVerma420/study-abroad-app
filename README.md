@@ -1,50 +1,131 @@
-# Welcome to your Expo app 👋
+# 📱 Study Abroad App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A simple React Native mobile application that displays a list of study abroad programs and allows users to view detailed information about each program.
 
-## Get started
+---
 
-1. Install dependencies
+## 🚀 Features
 
-   ```bash
-   npm install
-   ```
+- 📋 View a list of universities / study programs
+- 🏫 Each item shows:
+  - University name
+  - Country
+  - Short description
+- 🔍 Click on a program to view detailed information
+- 📱 Responsive UI for different screen sizes
+- ♻️ Clean and reusable component structure
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+## 🛠️ Tech Stack
 
-In the output, you'll find options to open the app in a
+- React Native (Expo)
+- TypeScript
+- React Navigation
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 📂 Project Structure
 
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```
+/src
+ ├── components
+ │     └── ProgramCard.tsx
+ ├── screens
+ │     ├── HomeScreen.tsx
+ │     └── DetailsScreen.tsx
+ ├── data
+ │     └── program.ts
+ ├── types
+ │     └── program.ts
+App.tsx
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+## 📊 Sample Data
 
-To learn more about developing your project with Expo, look at the following resources:
+The app uses static JSON data:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```json
+[
+  {
+    "id": 1,
+    "university": "University of Toronto",
+    "country": "Canada",
+    "description": "Top ranked university offering multiple international programs."
+  },
+  {
+    "id": 2,
+    "university": "University of Melbourne",
+    "country": "Australia",
+    "description": "Popular destination for international students."
+  },
+  {
+    "id": 3,
+    "university": "Oxford University",
+    "country": "UK",
+    "description": "World-class education with rich academic history."
+  }
+]
+```
 
-## Join the community
+---
 
-Join our community of developers creating universal apps.
+## ⚙️ Setup Instructions
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/OmVerma420/study-abroad-app.git
+cd study-abroad-app
+```
+
+2. **Install dependencies**
+
+```bash
+npm install
+```
+
+3. **Run the app**
+
+```bash
+npx expo start
+```
+
+---
+
+## 📱 How It Works
+
+- The **Home Screen** displays a list of programs using `FlatList`
+- Each program is rendered using a reusable `ProgramCard` component
+- On clicking a card, the app navigates to the **Details Screen**
+- The selected program data is passed via navigation parameters
+
+---
+
+## 🎯 Evaluation Criteria Covered
+
+- ✅ Clean and readable code structure
+- ✅ Responsive UI implementation
+- ✅ Proper use of reusable components
+- ✅ Functional navigation between screens
+- ✅ TypeScript for type safety
+
+---
+
+## 📌 Notes
+
+This project was built as part of a technical assignment to demonstrate:
+
+- React Native fundamentals
+- Component-based architecture
+- Navigation handling
+- TypeScript usage
+
+---
+
+## 👨‍💻 Author
+
+**Om Verma**  
+GitHub: [https://github.com/OmVerma420](https://github.com/OmVerma420)
